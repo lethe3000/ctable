@@ -1,7 +1,12 @@
 # Basic info
 
-Print colorful(256) tables for terminal
-    with built-in themes: dark, blue, red, green
+Print colorful(256) tables for terminal with built-in themes: 
+
+* dark
+* blue
+* red
+* green
+
 Based on tabulate 0.7.7
 
 ## requirement
@@ -26,4 +31,5 @@ Need install tabulate via pip or easy-install
 
 ```
 
+Output 
 ![Result](/images/table.png)
