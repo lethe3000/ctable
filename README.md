@@ -11,16 +11,14 @@ Based on tabulate 0.7.7
 
 ## requirement
 
-Need install tabulate via pip or easy-install
-
 ```bash
-    $ pip install tabulate==0.7.7
+    $ pip install colortable
 ```
 
 ## usage
 
 ```python
-    from ctable import table
+    from colortable import table
 
     row = [["Alice","F",24],["Bob","M",19],["Carlos","M",19]]
     header = ['name', 'male', 'age']
