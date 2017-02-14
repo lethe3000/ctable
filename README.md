@@ -32,4 +32,5 @@ Need install tabulate via pip or easy-install
 ```
 
 Output 
+
 ![Result](/images/table.png)
