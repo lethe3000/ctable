@@ -7,7 +7,18 @@ Print colorful(256) tables for terminal
 Based on tabulate 0.7.7
 """
 from collections import namedtuple
-from tabulate import tabulate
+import tabulate
+
+
+def build_simple_row(padded_cells, rowfmt):
+    "Format row according to DataRow format without padding."
+    begin, sep, end = rowfmt
+    # hack here remove rstrip()
+    return (begin + sep.join(padded_cells) + end)  # .rstrip()
+
+
+tabulate._build_simple_row = build_simple_row
+
 
 Color = namedtuple("Color", ["fg", "bg"])
 ColorStyle = namedtuple("ColorStyle", ["head", "row"])
@@ -47,7 +58,7 @@ def coloration(color, text):
 
 
 def table(tabular_data, headers=(), tablefmt='plain', colorfmt='dark'):
-    before_colorize = tabulate(tabular_data, headers, tablefmt=tablefmt).split('\n')
+    before_colorize = tabulate.tabulate(tabular_data, headers, tablefmt=tablefmt).split('\n')
     if tablefmt == 'plain':
         if not isinstance(colorfmt, ColorStyle):
             colorfmt = _color_templates.get(colorfmt, _color_templates['dark'])
