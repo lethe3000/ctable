@@ -7,7 +7,7 @@ Print colorful(256) tables for terminal with built-in themes:
 * red
 * green
 
-Based on tabulate 0.7.7
+Based on tabulate 0.7.7 or newer
 
 ## requirement
 
