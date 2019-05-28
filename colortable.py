@@ -78,5 +78,5 @@ if __name__ == '__main__':
     header = ['name', 'male', 'age']
 
     for colorfmt in ['dark', 'green', 'red', 'blue']:
-        print table(row, header, colorfmt=colorfmt)
-        print
+        print(table(row, header, colorfmt=colorfmt))
+        print()
