@@ -7,7 +7,7 @@ from setuptools import setup
 setup(
     name='colortable',
     py_modules=['colortable'],
-    version='0.3',
+    version='0.4',
     description='Print colorful(256) tables for terminal with built-in themes',
     author='lethe3000',
     author_email='lethe30003000@gmail.com',
